@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #9C3687;
+  --secondary-color: #e32055;
+  }
+
+.exemplo {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+body {
+    margin: 0;
+}
+
+#main-content {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+/*Troca cor de seta de voltar*/
+.fa-arrow-left {
+    color: var(--primary-color);
+}
+
+.fa-shopping-cart {
+    color: #727C8E;
+}
+
+/**Classes utilitárias**/
+
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-justify-around {
+    justify-content: space-around;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-wrap {   
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: grid;
+}

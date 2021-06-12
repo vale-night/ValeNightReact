@@ -1,0 +1,45 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-areas: "home search cart profile more";
+  width: 100vw;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  background-color: #ffffff;
+  padding: 10px 0;
+}
+.item-footer a {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #6f7888;
+}
+
+.item-footer a {
+  color: #6f7888;
+  text-decoration: none;
+}
+
+.item-footer a.active,
+.item-footer a:hover {
+  color: #ff6969;
+}
+
+#home {
+  grid-area: home;
+}
+
+#search {
+  grid-area: search;
+}
+
+#cart {
+  grid-area: cart;
+}
+
+#profile {
+  grid-area: profile;
+}
