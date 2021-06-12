@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/header';
 import Footer from './components/footer';
+import Home from './pages/home';
 import './App.css'
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Header />
           <Switch>
             <Route exact={true} path='/'>
-              Hello World
+              <Home />
             </Route>
           </Switch>
       <Footer />
