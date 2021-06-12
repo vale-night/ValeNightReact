@@ -7,6 +7,7 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cadastro from './pages/Cadastro';
+import Home from './pages/Home';
 import './App.css'
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Header />
           <Switch>
             <Route exact={true} path='/'>
-              Hello World
+              <Home />
             </Route>
 
             <Route exact={true} path='/cadastro'>
