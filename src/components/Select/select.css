@@ -1,0 +1,6 @@
+select {
+    height: 3.75rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    font-size: 15;
+}

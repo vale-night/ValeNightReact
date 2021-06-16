@@ -15,7 +15,7 @@ export default () => {
 		</div>
 
 		<div className="item-footer" id="search">
-			<Link to="filtro-festa">
+			<Link to="filtro">
 				<i className="fas fa-search"></i>
 				Search
 			</Link>

@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css'
+import Filtro from './pages/Filtro';
 
 function App() {
   return (
@@ -21,6 +22,10 @@ function App() {
 
             <Route exact={true} path='/cadastro'>
               <Cadastro />
+            </Route>
+
+            <Route exact={true} path='/filtro'>
+              <Filtro />
             </Route>
             
           </Switch>

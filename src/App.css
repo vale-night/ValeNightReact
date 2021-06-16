@@ -27,6 +27,8 @@ body {
     width: 100%;
 }
 
+
+
 /*Troca cor de seta de voltar*/
 .fa-arrow-left {
     color: var(--primary-color);
@@ -36,8 +38,13 @@ body {
     color: #727C8E;
 }
 
-/**Classes utilitárias**/
+/*Classes gerais*/
 
+h2 {
+    color: var(--primary-color);
+}
+
+/**Classes utilitárias**/
 
 .flex {
     display: flex;
