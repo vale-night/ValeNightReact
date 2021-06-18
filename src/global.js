@@ -1,6 +1,0 @@
-const PRIMARY_COLOR = '#9C3687';
-const SECONDARY_COLOR = '#e32055';
-
-export default {
-    PRIMARY_COLOR, SECONDARY_COLOR
-}

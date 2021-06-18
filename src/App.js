@@ -4,6 +4,10 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import { ThemeProvider } from '@material-ui/styles';
+import 'fontsource-roboto';
+
+import defaultTheme from './materialTheme';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Cadastro from './pages/Cadastro';
@@ -13,24 +17,26 @@ import Filtro from './pages/Filtro';
 
 function App() {
   return (
-	<BrowserRouter>
-      <Header />
-          <Switch>
-            <Route exact={true} path='/'>
-              <Home />
-            </Route>
+  <ThemeProvider theme={defaultTheme}>
+    <BrowserRouter>
+        <Header />
+            <Switch>
+              <Route exact={true} path='/'>
+                <Home />
+              </Route>
 
-            <Route exact={true} path='/cadastro'>
-              <Cadastro />
-            </Route>
+              <Route exact={true} path='/cadastro'>
+                <Cadastro />
+              </Route>
 
-            <Route exact={true} path='/filtro'>
-              <Filtro />
-            </Route>
-            
-          </Switch>
-      <Footer />
-	</BrowserRouter>
+              <Route exact={true} path='/filtro'>
+                <Filtro />
+              </Route>
+              
+            </Switch>
+        <Footer />
+    </BrowserRouter>
+  </ThemeProvider>
   );
 }
 
