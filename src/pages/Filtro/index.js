@@ -1,4 +1,4 @@
-import { Box, Button, Slider } from '@material-ui/core';
+import { Box, Button, Slider, Typography } from '@material-ui/core';
 import React from 'react';
 import Input from '../../components/Input'
 import Select from '../../components/Select';
@@ -35,7 +35,6 @@ const CustomSlider = ({id, min, max, defaultValue, marks, header, step = 1}) => 
             <h5>{header}</h5>
             <Slider
                 id={id}
-                knobSize={15}
                 defaultValue={defaultValue}
                 min={min}
                 max={max}
@@ -92,7 +91,7 @@ export default () => {
             <form>
                 <Box display="flex" flexDirection="column" justifyContent="flex-end">
                     <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-                        <h2>Encontre sua festa</h2>
+                        <Typography color="primary" variant="h4" component="h4">Encontre sua Festa</Typography>
                         <Input id="name" type="text" placeholder="Nome da Festa / Local" value="" />
                         <Select id="genre" placeholder="Selecione o Gênero" value="" dataset={genreDataSet} />
                         <CustomSlider id="age" 

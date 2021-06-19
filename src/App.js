@@ -14,6 +14,7 @@ import Cadastro from './pages/Cadastro';
 import Home from './pages/Home';
 import './App.css'
 import Filtro from './pages/Filtro';
+import Carrinho from './pages/Carrinho';
 
 function App() {
   return (
@@ -31,6 +32,10 @@ function App() {
 
               <Route exact={true} path='/filtro'>
                 <Filtro />
+              </Route>
+
+              <Route exact={true} path='/carrinho'>
+                <Carrinho />
               </Route>
               
             </Switch>
