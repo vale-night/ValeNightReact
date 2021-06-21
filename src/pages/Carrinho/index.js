@@ -1,5 +1,6 @@
 import { Box, makeStyles, Typography } from '@material-ui/core';
 import React from 'react'
+import InsertCupom from './insertCupom';
 import ItemCarrinho from './itemCarrinho';
 
 const useStyles = makeStyles((theme) => ({
@@ -83,6 +84,9 @@ export default (theme) => {
                 <div className={classes.orderLine}>
                     <span>Cupom</span>
                     <span>-R$ 20,00</span>
+                </div>
+                <div className={classes.orderLine}>
+                    <InsertCupom />
                 </div>
             </div>
         </Box>
