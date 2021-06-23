@@ -1,7 +1,8 @@
 import { Box, Button, makeStyles, Typography } from '@material-ui/core';
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import InsertCupom from './insertCupom';
-import ItemCarrinho from './itemCarrinho';
+import ItemCarrinho from '../components/itemCarrinho';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +34,11 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         width:'35%',
+        fontSize: 10
+    },
+    link: {
+        textDecoration: 'none',
+        color: '#fff',
         fontSize: 10
     }
 }));
@@ -115,7 +121,10 @@ export default (theme) => {
                         Continuar comprando
                     </Button>
                     <Button variant="contained" color="primary" size="small" className={classes.button}>
-                        Finalizar pedido
+                        {/* Quero o estilo do botão mas a funcionalidade do link */}
+                        <Link className={classes.link} to="/finalizarPedido">
+                            Finalizar pedido
+                        </Link>
                     </Button>
                 </div>
             </div>

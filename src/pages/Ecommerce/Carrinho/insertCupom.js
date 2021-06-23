@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, makeStyles} from '@material-ui/core';
-import Input from '../../components/Input';
+import Input from '../../../components/Input';
 
 const useStyles = makeStyles((theme) => ({
     root: {

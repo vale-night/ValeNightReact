@@ -5,7 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { AddCircleOutline, ControlPoint, RemoveCircleOutline } from '@material-ui/icons';
+import { AddCircleOutline, RemoveCircleOutline } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
