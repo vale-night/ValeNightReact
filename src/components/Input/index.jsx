@@ -2,8 +2,8 @@ import React from 'react';
 import './input.css';
 
 
-export default ({id, type, placeholder, value}) => (
+export default ({id, type, placeholder, value, className}) => (
     <>
-        <input id={id} type={type} placeholder={placeholder} value={value} />
+        <input id={id} className={className} type={type} placeholder={placeholder} value={value} />
     </>
 );

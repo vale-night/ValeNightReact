@@ -1,11 +1,14 @@
-import { Box, makeStyles, Typography } from '@material-ui/core';
-import React from 'react'
+import { Box, Button, makeStyles, Typography } from '@material-ui/core';
+import React, { useState } from 'react'
 import InsertCupom from './insertCupom';
 import ItemCarrinho from './itemCarrinho';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        gap: 20
+        gap: 20,
+        flex: 1,
+        height: '80vh',
+        justifyContent:'space-around'
     },
     items: {
         width: '80%',
@@ -14,11 +17,23 @@ const useStyles = makeStyles((theme) => ({
     },
     orderDetails: {
         width: '80%',
-        marginTop: theme.spacing(2)
+        marginTop: theme.spacing(2),
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+        justifyContent: 'space-around'
     },
     orderLine: {
         display: 'flex',
         justifyContent:'space-between'
+    },
+    total: {
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    button: {
+        width:'35%',
+        fontSize: 10
     }
 }));
 
@@ -62,6 +77,9 @@ const items = [
 
 export default (theme) => {
     const classes = useStyles();
+
+    const [total, setTotal] = useState(10);
+
     return (
         <Box key="carrinho" className={classes.root} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-end">
             <Typography color="primary" variant="h4" component="h4">Sacola</Typography>
@@ -87,6 +105,18 @@ export default (theme) => {
                 </div>
                 <div className={classes.orderLine}>
                     <InsertCupom />
+                </div>
+                <div className={classes.orderLine}>
+                    <div className={classes.total}>
+                        <span style={{color: '#515c6f'}}>Total</span>
+                        <span style={{color: '#6c9c36'}}>{`R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`}</span>
+                    </div>
+                    <Button variant="contained" color="primary" size="small" className={classes.button}>
+                        Continuar comprando
+                    </Button>
+                    <Button variant="contained" color="primary" size="small" className={classes.button}>
+                        Finalizar pedido
+                    </Button>
                 </div>
             </div>
         </Box>
