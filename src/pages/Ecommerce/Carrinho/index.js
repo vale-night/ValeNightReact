@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import InsertCupom from './insertCupom';
 import ItemCarrinho from '../components/itemCarrinho';
+import { addProductToCart, getCart } from '../../../services/carrinhoApi';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,55 +44,32 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const items = [
-    {
-        amount: 1,
-        name: 'Refrigerante',
-        price: 4.5,
-        category: 'Consumíveis',
-        imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
-    },
-    {
-        amount: 1,
-        name: 'Refrigerante',
-        price: 4.5,
-        category: 'Consumíveis',
-        imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
-    },
-    {
-        amount: 1,
-        name: 'Refrigerante',
-        price: 4.5,
-        category: 'Consumíveis',
-        imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
-    },
-    {
-        amount: 1,
-        name: 'Refrigerante',
-        price: 4.5,
-        category: 'Consumíveis',
-        imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
-    },
-    {
-        amount: 1,
-        name: 'Refrigerante',
-        price: 4.5,
-        category: 'Consumíveis',
-        imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
-    }
-];
-
 export default (theme) => {
     const classes = useStyles();
 
-    const [total, setTotal] = useState(10);
+    const [items, setItems] = useState(getCart());
+    if(!items.length) {
+        addProductToCart({
+            id: Math.random() * 10000,
+            amount: 1,
+            name: 'Refrigerante',
+            price: 4.5,
+            category: 'Consumíveis',
+            imageUrl: 'https://mercadoeconsumo.com.br/wp-content/uploads/2018/11/coca-cola-reutersregis-duvignau-e1534852966658.jpg'
+        });
+        setItems(getCart());
+    }
 
+    console.log(items);
+    let totalItems = items && items.length ? items.map(item => item.amount * item.price).reduce((a, b) => a+b) : 0;
+    const [total, setTotal] = useState(totalItems);
     return (
         <Box key="carrinho" className={classes.root} display="flex" flexDirection="column" alignItems="center" justifyContent="flex-end">
             <Typography color="primary" variant="h4" component="h4">Sacola</Typography>
             <div className={classes.items}>
                 {items.map((item, index) => (
                     <ItemCarrinho key={`${item}-${index}`}
+                        id={item.id}
                         amount={item.amount}
                         name={item.name}
                         price={item.price}
