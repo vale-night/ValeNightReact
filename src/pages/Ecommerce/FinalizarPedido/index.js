@@ -123,7 +123,8 @@ export default () => {
                             name={item.name}
                             price={item.price}
                             category={item.category}
-                            imageUrl={item.imageUrl} />
+                            imageUrl={item.imageUrl}
+                            amountUpdatedHander={(newAmount) => console.log('TODO - Atualizar valor de acordo com o retornado pelo carrinho')}  />
                     ))}
                 </div>
                 <div className={classes.finishSection}>

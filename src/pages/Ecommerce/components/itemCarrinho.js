@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default ({ id, amount = 1, name, price, category, imageUrl }) => {
+export default ({ id, amount = 1, name, price, category, imageUrl, amountUpdatedHander }) => {
   
   const classes = useStyles();
   const theme = useTheme();
@@ -53,6 +53,10 @@ export default ({ id, amount = 1, name, price, category, imageUrl }) => {
     setItemCount(count);
     setItemPrice(count * price);
     updateProductAmountInCart(id, count);
+    console.log(count);
+    if(amountUpdatedHander) {
+      amountUpdatedHander(count);
+    }
   }
 
   return (

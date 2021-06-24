@@ -74,7 +74,7 @@ export default (theme) => {
                         name={item.name}
                         price={item.price}
                         category={item.category}
-                        imageUrl={item.imageUrl} />
+                        imageUrl={item.imageUrl}/>
                 ))}
             </div>
             <div className={classes.orderDetails}>
