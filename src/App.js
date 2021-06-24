@@ -17,6 +17,7 @@ import Filtro from './pages/Filtro';
 import Carrinho from './pages/Ecommerce/Carrinho';
 import FinalizarPedido from './pages/Ecommerce/FinalizarPedido';
 import ConfirmacaoPagamento from './pages/Ecommerce/ConfirmacaoPagamento';
+import Perfil from './pages/Perfil';
 
 function App() {
   return (
@@ -46,6 +47,10 @@ function App() {
               
               <Route exact={true} path='/pagamento/sucesso'>
                 <ConfirmacaoPagamento />
+              </Route>
+
+              <Route exact={true} path='/perfil'>
+                <Perfil />
               </Route>
             </Switch>
         <Footer />

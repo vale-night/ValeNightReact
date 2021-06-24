@@ -17,28 +17,28 @@ export default () => {
 		<div className="item-footer" id="search">
 			<Link to="filtro">
 				<i className="fas fa-search"></i>
-				Search
+				Filtro
 			</Link>
 		</div>
 
 		<div className="item-footer" id="cart">
 			<Link to="/carrinho">
 				<i className="fas fa-shopping-cart"></i>
-				Cart
+				Carrinho
 			</Link>
 		</div>
 
 		<div className="item-footer" id="profile">
 			<Link to="/perfil">
 				<i className="fas fa-user"></i>
-				Profile
+				Perfil
 			</Link>
 		</div>
 
 		<div className="item-footer" id="more">
 			<Link to="#">
 				<i className="fas fa-plus"></i>
-				More
+				Mais
 			</Link>
 		</div>
 
