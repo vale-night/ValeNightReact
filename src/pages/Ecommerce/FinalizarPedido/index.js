@@ -134,7 +134,7 @@ export default () => {
                     </div>
                     <Button variant="contained" color="primary" size="small" className={classes.button}>
                         {/* Quero o estilo do botão mas a funcionalidade do link */}
-                        <Link className={classes.link} to="/finalizarPedido">
+                        <Link className={classes.link} to="/pagamento/sucesso">
                             Finalizar pedido
                         </Link>
                     </Button>

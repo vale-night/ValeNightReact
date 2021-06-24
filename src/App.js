@@ -16,6 +16,7 @@ import './App.css'
 import Filtro from './pages/Filtro';
 import Carrinho from './pages/Ecommerce/Carrinho';
 import FinalizarPedido from './pages/Ecommerce/FinalizarPedido';
+import ConfirmacaoPagamento from './pages/Ecommerce/ConfirmacaoPagamento';
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
                 <FinalizarPedido />
               </Route>
               
+              <Route exact={true} path='/pagamento/sucesso'>
+                <ConfirmacaoPagamento />
+              </Route>
             </Switch>
         <Footer />
     </BrowserRouter>
