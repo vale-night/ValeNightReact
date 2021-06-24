@@ -118,6 +118,7 @@ export default () => {
                 <div className={classes.items}>
                     {items.map((item, index) => (
                         <ItemCarrinho key={`${item}-${index}`}
+                            id={item.id}
                             amount={item.amount}
                             name={item.name}
                             price={item.price}
