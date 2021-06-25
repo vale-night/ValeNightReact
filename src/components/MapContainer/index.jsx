@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Map, InfoWindow, Marker } from 'google-maps-react';
 import { SwipeableDrawer } from '@material-ui/core';
+import EventDetails from './EventDetails';
 React.useLayoutEffect = React.useEffect 
 
 
@@ -71,13 +72,4 @@ export default ({google}) => {
             </SwipeableDrawer>
         </>
     );
-}
-
-const EventDetails = ({closeDrawerFunction}) => {
-    return (
-        <div>
-            <h4> { 'fiesta' } </h4>
-            <button onClick={closeDrawerFunction}></button>
-        </div>
-    )
 }
