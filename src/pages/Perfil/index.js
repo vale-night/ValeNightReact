@@ -3,10 +3,7 @@ import MenuList from '@material-ui/core/MenuList';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Avatar, Button, makeStyles, Typography } from '@material-ui/core';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
-import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
-import { AccountCircle, CreditCard, Description, Email, KeyboardArrowRight, List, RateReview, Stars } from '@material-ui/icons';
+import { AccountCircle, CreditCard, Description, Email, List, RateReview, Stars } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import perfilImage from '../../assets/perfil.png';
 
@@ -61,7 +58,7 @@ export default () => {
                     <Typography variant="h5" component="h5">Naruto</Typography>
                     <span>naruto@konoha.com</span>
                     <Button variant="contained" color="primary" size="small" className={classes.button}>
-                        <Link className={classes.link} to="/editarPerfil">
+                        <Link className={classes.link} to="/perfil/editar">
                             Editar Perfil
                         </Link>
                     </Button>
