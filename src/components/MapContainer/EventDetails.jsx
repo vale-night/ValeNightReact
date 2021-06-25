@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default ({closeDrawerFunction, event}) => {
-    if(!event) {//Temporario
+    if(!event || !event.photos || !event.mediumPrice) {//Temporario
         const photos = [
             {url: 'https://www.viajali.com.br/wp-content/uploads/2018/07/bares-bh-24.jpg', name: 'Entrada'},
             {url: 'https://www.viajali.com.br/wp-content/uploads/2018/07/bares-bh-24.jpg', name: 'Entrada'}
@@ -127,11 +127,10 @@ export default ({closeDrawerFunction, event}) => {
     return (
         <div className={classes.root}>
             <IconButton color="primary" onClick={closeDrawerFunction}>
-
                 <HighlightOff/>
             </IconButton>
             <div className={classes.photosContainer}>
-                {event.photos.map(photo => (
+                {event.photos?.map(photo => (
                     <Photo photoObj={photo} className={classes.photo}/>
                 ))}
             </div>
