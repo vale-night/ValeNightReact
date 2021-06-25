@@ -19,6 +19,7 @@ import FinalizarPedido from './pages/Ecommerce/FinalizarPedido';
 import ConfirmacaoPagamento from './pages/Ecommerce/ConfirmacaoPagamento';
 import Perfil from './pages/Perfil';
 import EditarPerfil from './pages/Perfil/EditarPerfil';
+import EditarDadosPessoais from './pages/Perfil/EditarDadosPessoais';
 
 function App() {
   return (
@@ -56,6 +57,10 @@ function App() {
 
               <Route exact={true} path='/perfil/editar'>
                 <EditarPerfil />
+              </Route>
+
+              <Route exact={true} path='/perfil/editarDadosPessoais'>
+                <EditarDadosPessoais />
               </Route>
             </Switch>
         <Footer />

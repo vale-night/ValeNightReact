@@ -41,6 +41,10 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         fontSize: 10
     },
+    menuLink: {
+        textDecoration: 'none',
+        color: 'inherit'
+    },
     menu: {
         boxShadow: '0px 8px 15px 0px #e7eaf0',
         borderRadius: '5px'
@@ -75,7 +79,9 @@ export default () => {
                     <ListItemIcon>
                         <AccountCircle fontSize="large" />
                     </ListItemIcon>
-                    <Typography variant="inherit" noWrap>Dados Pessoais</Typography>
+                    <Link className={classes.menuLink} to="/perfil/editarDadosPessoais">
+                        <Typography variant="inherit" noWrap>Dados Pessoais</Typography>
+                    </Link>
                 </MenuItem>
                 <MenuItem>
                     <ListItemIcon>
