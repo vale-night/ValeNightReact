@@ -115,7 +115,7 @@ export default ({google}) => {
             <SwipeableDrawer
                 anchor="bottom"
                 open={drawerOpened}
-                onOpen={() => console.log('Abriu')}
+                onOpen={() => console.log('Abriu aa')}
                 onClose={() => {console.log('fechou')}}
             >
                 <EventDetails event={drawerEvent} closeDrawerFunction={() => {setDrawerOpened(false)}}/>
